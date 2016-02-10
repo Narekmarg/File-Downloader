@@ -1,0 +1,127 @@
+﻿<Window x:Class="File_Downloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:File_Downloader"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+ 
+
+            <Button Width="Auto" Height="Auto" HorizontalAlignment="Left" Grid.Row="0"  
+                Content="Destination Folder"
+                x:Name="download_folder_btn"
+                Padding="5"
+                Margin="10"
+                Click="download_folder_btn_Click"
+                />
+
+        <Button Width="Auto" Height="Auto" HorizontalAlignment="Center" Grid.Row="0" 
+                x:Name="conversion_folder_btn"
+                Content="Conversion folder"
+                Padding="5"
+                Margin="10"
+                Click="conversion_folder_btn_Click"
+                >
+        </Button>
+
+        <Button Width="Auto" Height="Auto" HorizontalAlignment="Right" Grid.Row="0"  
+                Content="Start download"
+                x:Name="start_btn"
+                Padding="5"
+                Margin="10"
+                Click="start_btn_Click"
+                >
+        </Button>
+        
+        <ProgressBar Grid.Row="1" HorizontalAlignment="Left" x:Name="progress_bar"
+		        Height="20"
+                Width="400"         
+		        Margin="10"
+		        VerticalAlignment="Top"
+                DockPanel.Dock="Top"
+                Grid.ColumnSpan="2"
+		        Foreground="Gold"
+                Maximum="1"
+                     >
+         </ProgressBar>
+        <Button Content="Cancel"
+                Grid.Row="1"
+                HorizontalAlignment="Right"
+                Padding="5"
+                Margin="10,5"
+                Height="Auto"
+                x:Name="folder_cancel_btn"
+                Click="folder_cancel_btn_Click"
+            >
+        </Button>
+
+        <ProgressBar Grid.Row="2" HorizontalAlignment="Left" x:Name="conversion_progress_bar"
+		        Height="20"
+                Width="400"         
+		        Margin="10"
+		        VerticalAlignment="Top"
+                DockPanel.Dock="Top"
+                Grid.ColumnSpan="2"
+		        Foreground="Gold"
+                Maximum="1"
+                     >
+        </ProgressBar>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <TextBlock Text="Average age: " Padding="5" Margin="5"></TextBlock>
+            <TextBlock x:Name="average_age" Padding="5" Margin="5" Background="Gold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="4">
+            <TextBlock Text="Five most common names: " Padding="5" Margin="5"></TextBlock>
+            <TextBlock x:Name="most_common" Padding="5" Margin="5" Background="Gold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="5">
+            <TextBlock Text="Five most uncommon names: " Padding="5" Margin="5"></TextBlock>
+            <TextBlock x:Name="most_uncommon" Padding="5" Margin="5" Background="Gold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="6">
+            <TextBlock Text="Top Three Months: " Padding="5" Margin="5"></TextBlock>
+            <TextBlock x:Name="top_three" Padding="5" Margin="5" Background="Gold"></TextBlock>
+        </StackPanel>
+
+        <Button Content="Start calculation" x:Name="start_calc" Grid.Row="7" Width="100
+                "
+                HorizontalAlignment="Left"
+                Margin="5"
+                Click="start_calc_Click"
+                >
+        </Button>
+
+        <Button Content="Test folder" x:Name="test_folder" Grid.Row="7" Width="100
+                "
+                HorizontalAlignment="Center"
+                Margin="5"
+                Click="test_folder_Click"
+                >
+        </Button>
+
+        <Button Content="Calculate on test foler" x:Name="start_test_calc" Grid.Row="7" Width="150
+                "
+                HorizontalAlignment="Right"
+                Margin="5"
+                Click="start_test_calc_Click"
+                >
+        </Button>
+
+    </Grid>
+</Window>
